@@ -1,4 +1,4 @@
-# appiness
+# appiness Node Application
 Making the first user who registers, as Admin. 
 
 ● The code should be well structured
