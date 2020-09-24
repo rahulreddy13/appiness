@@ -1,0 +1,48 @@
+ <div class="container">
+    <h1 class="well">Registration Form</h1>
+	<div class="col-lg-12 well">
+		<div class="row">
+			<form method="post" action="/" novalidate>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>First Name</label>
+						<input name="First_Name" type="text" placeholder="Enter First Name Here.." value="" class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Last Name</label>
+						<input name="Last_Name" type="text" placeholder="Enter Last Name Here.." value="" class="form-control">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4 form-group">
+						<label>City</label>
+						<input name="City" type="text" placeholder="Enter City Name Here.." value="" class="form-control">
+					</div>	
+					<div class="col-sm-4 form-group">
+						<label>State</label>
+						<input name="State" type="text" placeholder="Enter State Name Here.." value="" class="form-control">
+					</div>	
+					<div class="col-sm-4 form-group">
+						<label>Pincode</label>
+						<input name="Pincode" type="number" placeholder="Enter Pin Code Here.." value="" class="form-control">
+					</div>		
+				</div>	
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Phone Number</label>
+						<input name="Phone_Number" type="number" placeholder="Enter Phone Number Here.." value="" class="form-control">
+					</div>		
+					<div class="col-sm-6 form-group">
+						<label>Email Address</label>
+						<input name="Email" type="text" placeholder="Enter Email Address Here.." value="" class="form-control">
+					</div>	
+				</div>	
+				{{#if Error_Status}}
+					<h4 style="color: red;text-align: center">Error While Registering User ( {{ error.message }} )</h4>
+				{{/if}}	
+				<div class="form-actions">
+					<button class="btn btn-lg btn-info" type="submit">Send</button>
+				</div>
+			</form>
+		</div>
+	</div>

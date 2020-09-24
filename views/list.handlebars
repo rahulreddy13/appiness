@@ -1,0 +1,39 @@
+{{#if Error_Status}}
+    <h4 style="color: red;text-align: center">Error While Fetching Users</h4>
+{{else}}
+    {{#if Users}}
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">City</th>
+                    <th scope="col">State</th>
+                    <th scope="col">Pincode</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each Users}}
+                <tr>
+                    <td scope="row">{{User_Id}}</td>
+                    <td>{{Role}}</td>
+                    <td>{{First_Name}}</td>
+                    <td>{{Last_Name}}</td>
+                    <td>{{City}}</td>
+                    <td>{{State}}</td>
+                    <td>{{Pincode}}</td>
+                    <td>{{Phone_Number}}</td> 
+                    <td>{{Email}}</td>   
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
+    {{else}}
+        <h4 style="color: red;text-align: center">No Users Found!!</h4>
+    {{/if}}
+{{/if}}
